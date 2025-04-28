@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    style="@style/AppCard"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/gradient_background">
+
+        <!-- Delay Info -->
+        <TextView
+            android:id="@+id/tv_delay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text=""
+        android:textColor="#FF0000"
+        style="@style/BodyText"
+        android:fontFamily="@font/poppins_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_weather"
+        app:layout_constraintHorizontal_weight="2" />
+
+        <!-- Weather Icon -->
+        <ImageView
+            android:id="@+id/iv_weather"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/img_4"
+            android:contentDescription="@string/weather_icon"
+            app:layout_constraintStart_toEndOf="@id/tv_delay"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_map"
+            app:layout_constraintHorizontal_weight="1" />
+
+        <!-- Map Button -->
+        <ImageView
+            android:id="@+id/btn_map"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/map"
+            android:backgroundTint="@color/colorAccent"
+            android:contentDescription="@string/view_map"
+            app:layout_constraintStart_toEndOf="@id/iv_weather"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_weight="1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

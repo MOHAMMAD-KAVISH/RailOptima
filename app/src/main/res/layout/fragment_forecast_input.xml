@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/gradient_background">
+
+    <!-- Header Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_header"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/AppCard"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forecast_input_title"
+                style="@style/TitleText" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forecast_input_subtitle"
+                style="@style/BodyText"
+                android:layout_marginTop="4dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Rake ID -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_rake_id"
+        style="@style/AppTextInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/card_header"
+        android:layout_marginTop="16dp"
+        app:hintEnabled="true"
+        app:hintAnimationEnabled="true"
+        app:hintTextAppearance="@style/HintText"
+        app:hintTextColor="@color/textSecondary"
+        android:hint="@string/rake_id">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_rake_id"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:inputType="text"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/textPrimary"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:paddingHorizontal="8dp"
+            android:backgroundTint="@color/inputBackground" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Rake Type Spinner -->
+    <TextView
+        android:id="@+id/tv_rake_type_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/rake_type"
+        style="@style/HintText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_rake_id"
+        android:layout_marginTop="16dp" />
+    <Spinner
+        android:id="@+id/sp_rake_type"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_rake_type_label"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/spinner_background"
+        android:backgroundTint="@color/inputBackground"
+        android:spinnerMode="dropdown"
+        android:popupBackground="#79B1CA"
+        android:dropDownSelector="@color/colorAccent"
+        android:textColor="@color/textPrimary"
+        android:fontFamily="@font/poppins_regular"
+        android:padding="8dp"
+        style="@style/BodyText" />
+
+    <!-- Destination -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til_destination"
+        style="@style/AppTextInput"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/sp_rake_type"
+        android:layout_marginTop="16dp"
+        app:hintEnabled="true"
+        app:hintAnimationEnabled="true"
+        app:hintTextAppearance="@style/HintText"
+        app:hintTextColor="@color/textSecondary"
+        android:hint="@string/destination">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/et_destination"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:inputType="text"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/textPrimary"
+            android:paddingTop="8dp"
+            android:paddingBottom="4dp"
+            android:paddingHorizontal="8dp"
+            android:backgroundTint="@color/inputBackground" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Forecast Button -->
+    <Button
+        android:id="@+id/btn_forecast"
+        style="@style/AppButton"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="@string/forecast"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/til_destination"
+        android:layout_marginTop="24dp"
+        android:padding="12dp" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/pb_forecast"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_forecast"
+        android:layout_marginTop="16dp"
+        android:indeterminateTint="@color/colorAccent" />
+
+    <!-- Footer -->
+    <TextView
+        android:id="@+id/tv_footer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="© 2025 Mohammad Kavish | RailOptima v1.0"
+        style="@style/FooterText"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="8dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

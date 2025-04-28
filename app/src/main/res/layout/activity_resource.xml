@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_gradient">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/resource"
+            app:titleTextAppearance="@style/TitleText"
+            app:titleTextColor="#FFFFFF"
+            android:elevation="4dp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Header Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/resource_input_title"
+                        style="@style/TitleText" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/resource_input_subtitle"
+                        style="@style/BodyText"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Resource Type Spinner -->
+            <TextView
+                android:id="@+id/tv_resource_type_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/resource_type"
+                style="@style/HintText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_header"
+                android:layout_marginTop="16dp" />
+            <Spinner
+                android:id="@+id/sp_resource_type"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_resource_type_label"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/spinner_background"
+                android:backgroundTint="#F5F5F5"
+                android:spinnerMode="dropdown"
+                android:popupBackground="#FFFFFF"
+                android:dropDownSelector="@color/colorAccent"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="8dp"
+                style="@style/BodyText" />
+
+            <!-- Resource ID -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_resource_id"
+                style="@style/AppTextInput"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sp_resource_type"
+                android:layout_marginTop="16dp"
+                app:hintEnabled="true"
+                app:hintAnimationEnabled="true"
+                app:hintTextAppearance="@style/HintText"
+                app:hintTextColor="#757575"
+                android:hint="@string/resource_id">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_resource_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:inputType="text"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textColor="#000000"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="4dp"
+                    android:paddingHorizontal="8dp"
+                    android:backgroundTint="#F5F5F5" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!-- Status Spinner -->
+            <TextView
+                android:id="@+id/tv_status_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/status"
+                style="@style/HintText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/til_resource_id"
+                android:layout_marginTop="16dp" />
+            <Spinner
+                android:id="@+id/sp_status"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_status_label"
+                android:layout_marginTop="4dp"
+                android:background="@drawable/spinner_background"
+                android:backgroundTint="#F5F5F5"
+                android:spinnerMode="dropdown"
+                android:popupBackground="#FFFFFF"
+                android:dropDownSelector="@color/colorAccent"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="8dp"
+                style="@style/BodyText" />
+
+            <!-- Assign Resource Button -->
+            <Button
+                android:id="@+id/btn_assign_resource"
+                style="@style/AppButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:text="@string/assign_resource"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sp_status"
+                android:layout_marginTop="24dp"
+                android:padding="12dp" />
+
+            <!-- Resources RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_resources"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_assign_resource"
+                android:layout_marginTop="16dp" />
+
+            <!-- Footer -->
+            <TextView
+                android:id="@+id/tv_footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© 2025 Mohammad Kavish | RailOptima v1.0"
+                style="@style/FooterText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rv_resources"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

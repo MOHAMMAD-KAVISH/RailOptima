@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">RailOptima</string>
+    <string name="tagline">RailOptima: On Track!</string>
+    <string name="username">Username</string>
+    <string name="location">Location</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="home">Home</string>
+    <string name="forecast">Forecast</string>
+    <string name="schedule">Schedule</string>
+    <string name="delay">Delay</string>
+    <string name="resource">Resource</string>
+    <string name="settings">Settings</string>
+    <string name="logout">Logout</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="rake_id">Rake ID</string>
+    <string name="destination">Destination</string>
+    <string name="view_details">View Details</string>
+    <string name="forecast_details">Forecast Details</string>
+    <string name="close">Close</string>
+    <string name="time">Time</string>
+    <string name="add_schedule">Add Schedule</string>
+    <string name="confirm_schedule">Confirm Schedule</string>
+    <string name="confirm">Confirm</string>
+    <string name="cancel">Cancel</string>
+
+
+
+    <string name="reset_data_confirm">Are you sure you want to reset all data? This will log you out.</string>
+    <string name="reset">Reset</string>
+    <string name="forecast_result">Forecast Result</string>
+
+    <string name="loading_weather">Loading weather...</string>
+    <string name="weather_disabled">Weather disabled in settings</string>
+    <string name="weather_error">Failed to fetch weather</string>
+    <string name="location_denied">Location permission denied</string>
+    <string name="weather_info">%1$s Weather: %2$.1f°C, %3$s\nDelay Risk: %4$s</string>
+
+
+    <string name="weather_error_api">Weather API error, try again later</string>
+    <string name="weather_error_network">Network error, please check connection</string>
+    <string name="weather_error_api_key">Invalid weather API key</string>
+
+    <string name="map_description">Map showing train routes and stations</string>
+    <string name="weather_icon">Weather Icon</string>
+    <string name="view_map">View Map</string>
+
+    <string name="email">Email</string>
+    <string name="register">Register</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="toggle_password">Toggle Password Visibility</string>
+    <string name="name">Name</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="back_to_login">Back to Login</string>
+    <string name="forgot_password_instruction">Enter your email to receive a password reset link.</string>
+    <string name="submit">Submit</string>
+    <string name="footer_text">© 2025 Mohammad Kavish&#10;RailOptima v1.0 Built with 🚂</string>
+
+    <string name="forecast_input_title">Train Delay Forecast</string>
+    <string name="forecast_input_subtitle">Enter details to predict delays</string>
+    <string name="forecast_result_title">Forecast Results</string>
+    <string name="forecast_result_subtitle">Predicted delay and weather info</string>
+
+    <string name="forecast_details_content">Detailed forecast information will appear here.</string>
+    <string name="rake_type">Rake Type</string>
+
+    <string name="platform">Platform</string>
+
+    <string name="schedule_input_title">Schedule a Train</string>
+    <string name="schedule_input_subtitle">Plan rake assignments and timings</string>
+    <string name="confirm_schedule_content">Please confirm the schedule details.</string>
+    <string name="schedule_item_placeholder">Rake #123, Mumbai, 10:00</string>
+
+    <string name="report_delay">Report Delay</string>
+    <string name="station">Station</string>
+    <string name="delay_minutes">Delay (Minutes)</string>
+    <string name="resolve_delay">Resolve Delay</string>
+    <string name="resolve_delay_content">Are you sure you want to resolve this delay?</string>
+    <string name="resolve">Resolve</string>
+    <string name="delay_input_title">Report Train Delay</string>
+    <string name="delay_input_subtitle">Log delays for rakes at stations</string>
+    <string name="delay_item_placeholder">Rake #123, 30 min delay at Mumbai</string>
+
+    <string name="resource_id">Resource ID</string>
+    <string name="resource_type">Resource Type</string>
+    <string name="status">Status</string>
+    <string name="assign_resource">Assign Resource</string>
+    <string name="update_resource">Update Resource</string>
+    <string name="update_resource_content">Please confirm the updated resource status.</string>
+    <string name="update">Update</string>
+    <string name="resource_input_title">Manage Resources</string>
+    <string name="resource_input_subtitle">Assign and update crew, locomotives, and more</string>
+    <string name="resource_type_placeholder">Crew</string>
+    <string name="resource_id_placeholder">Crew A</string>
+    <string name="status_placeholder">Available</string>
+
+    <string name="settings_title">Settings</string>
+    <string name="settings_subtitle">Customize your RailOptima experience</string>
+    <string name="language">Language</string>
+    <string name="language_subtext">Choose your preferred language</string>
+    <string name="theme">Theme</string>
+    <string name="theme_subtext">Switch between Dark and Light mode</string>
+    <string name="enable_dark_mode">Enable Dark Mode</string>
+    <string name="font_size">Font Size</string>
+    <string name="font_size_subtext">Adjust text size for better readability</string>
+    <string name="notifications">Notifications</string>
+    <string name="notifications_subtext">Manage notification preferences</string>
+    <string name="auto_refresh_weather">Auto-Refresh Weather</string>
+    <string name="auto_refresh_subtext">Automatically update weather data</string>
+    <string name="enable_auto_refresh">Enable Auto-Refresh</string>
+    <string name="data_management">Data Management</string>
+    <string name="data_management_subtext">Clear app data or test notifications</string>
+    <string name="enable_notifications">Enable Notifications</string>
+    <string name="reset_data">Reset Data</string>
+    <string name="test_notification">Test Notification</string>
+</resources>

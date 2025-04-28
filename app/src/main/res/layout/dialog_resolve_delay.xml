@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/dialog_gradient">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resolve_delay"
+            style="@style/TitleText"
+            android:textColor="#000000" />
+
+        <!-- Content -->
+        <TextView
+            android:id="@+id/tv_dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/resolve_delay_content"
+            style="@style/BodyText"
+            android:textColor="#424242"
+            android:layout_marginTop="12dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="end">
+            <Button
+                android:id="@+id/btn_dialog_cancel"
+                style="@style/AppButton"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:text="@string/cancel"
+                android:backgroundTint="#B0BEC5"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="12dp"
+                android:padding="12dp" />
+            <Button
+                android:id="@+id/btn_dialog_resolve"
+                style="@style/AppButton"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:text="@string/resolve"
+                android:background="@drawable/button_gradient"
+                android:textColor="#FFFFFF"
+                android:padding="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardElevation="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:background="@drawable/dialog_gradient">
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tv_dialog_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_resource"
+            style="@style/TitleText"
+            android:textColor="#000000" />
+
+        <!-- Content -->
+        <TextView
+            android:id="@+id/tv_dialog_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/update_resource_content"
+            style="@style/BodyText"
+            android:textColor="#424242"
+            android:layout_marginTop="12dp" />
+
+        <!-- Status Spinner -->
+        <TextView
+            android:id="@+id/tv_dialog_status_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status"
+            style="@style/HintText"
+            android:layout_marginTop="16dp" />
+        <Spinner
+            android:id="@+id/sp_dialog_status"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="4dp"
+            android:background="@drawable/spinner_background"
+            android:backgroundTint="#F5F5F5"
+            android:spinnerMode="dropdown"
+            android:popupBackground="#FFFFFF"
+            android:dropDownSelector="@color/colorAccent"
+            android:textColor="#000000"
+            android:fontFamily="@font/poppins_regular"
+            style="@style/BodyText" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp"
+            android:gravity="end">
+            <Button
+                android:id="@+id/btn_dialog_cancel"
+                style="@style/AppButton"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:text="@string/cancel"
+                android:backgroundTint="#B0BEC5"
+                android:textColor="#FFFFFF"
+                android:layout_marginEnd="12dp"
+                android:padding="12dp" />
+            <Button
+                android:id="@+id/btn_dialog_update"
+                style="@style/AppButton"
+                android:layout_width="wrap_content"
+                android:layout_height="58dp"
+                android:text="@string/update"
+                android:background="@drawable/button_gradient"
+                android:textColor="#FFFFFF"
+                android:padding="12dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

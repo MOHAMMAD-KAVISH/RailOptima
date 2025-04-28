@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_gradient">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="@string/settings"
+            app:titleTextAppearance="@style/TitleText"
+            app:titleTextColor="#FFFFFF"
+            android:elevation="4dp" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <!-- Header Card -->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/card_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                style="@style/AppCard"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_title"
+                        style="@style/TitleText" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/settings_subtitle"
+                        style="@style/BodyText"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Language Section -->
+            <TextView
+                android:id="@+id/tv_language_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/language"
+                style="@style/TitleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/card_header"
+                android:layout_marginTop="16dp" />
+            <TextView
+                android:id="@+id/tv_language_subtext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/language_subtext"
+                style="@style/BodyText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_language_label"
+                android:layout_marginTop="4dp" />
+            <Spinner
+                android:id="@+id/sp_language"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_language_subtext"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spinner_background"
+                android:backgroundTint="#F5F5F5"
+                android:spinnerMode="dropdown"
+                android:popupBackground="#FFFFFF"
+                android:dropDownSelector="@color/colorAccent"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppins_regular"
+                style="@style/BodyText" />
+
+            <!-- Theme Section -->
+            <TextView
+                android:id="@+id/tv_theme_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/theme"
+                style="@style/TitleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sp_language"
+                android:layout_marginTop="16dp" />
+            <TextView
+                android:id="@+id/tv_theme_subtext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/theme_subtext"
+                style="@style/BodyText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_theme_label"
+                android:layout_marginTop="4dp" />
+            <Switch
+                android:id="@+id/sw_theme"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:text="@string/enable_dark_mode"
+                style="@style/AppSwitch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_theme_subtext"
+                android:layout_marginTop="8dp"
+                android:padding="8dp" />
+
+            <!-- Font Size Section -->
+            <TextView
+                android:id="@+id/tv_font_size_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/font_size"
+                style="@style/TitleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sw_theme"
+                android:layout_marginTop="16dp" />
+            <TextView
+                android:id="@+id/tv_font_size_subtext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/font_size_subtext"
+                style="@style/BodyText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_font_size_label"
+                android:layout_marginTop="4dp" />
+            <Spinner
+                android:id="@+id/sp_font_size"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_font_size_subtext"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/spinner_background"
+                android:backgroundTint="#F5F5F5"
+                android:spinnerMode="dropdown"
+                android:popupBackground="#FFFFFF"
+                android:dropDownSelector="@color/colorAccent"
+                android:textColor="#000000"
+                android:fontFamily="@font/poppins_regular"
+                style="@style/BodyText" />
+
+            <!-- Notifications Section -->
+            <TextView
+                android:id="@+id/tv_notifications_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications"
+                style="@style/TitleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sp_font_size"
+                android:layout_marginTop="16dp" />
+            <TextView
+                android:id="@+id/tv_notifications_subtext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/notifications_subtext"
+                style="@style/BodyText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_notifications_label"
+                android:layout_marginTop="4dp" />
+            <Switch
+                android:id="@+id/sw_notifications"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:text="@string/enable_notifications"
+                style="@style/AppSwitch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_notifications_subtext"
+                android:layout_marginTop="8dp"
+                android:padding="8dp" />
+
+            <!-- Auto-Refresh Weather Section -->
+            <TextView
+                android:id="@+id/tv_auto_refresh_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/auto_refresh_weather"
+                style="@style/TitleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sw_notifications"
+                android:layout_marginTop="16dp" />
+            <TextView
+                android:id="@+id/tv_auto_refresh_subtext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/auto_refresh_subtext"
+                style="@style/BodyText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_auto_refresh_label"
+                android:layout_marginTop="4dp" />
+            <Switch
+                android:id="@+id/sw_auto_refresh"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:text="@string/enable_auto_refresh"
+                style="@style/AppSwitch"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_auto_refresh_subtext"
+                android:layout_marginTop="8dp"
+                android:padding="8dp" />
+
+            <!-- Data Management Section -->
+            <TextView
+                android:id="@+id/tv_data_management_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/data_management"
+                style="@style/TitleText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/sw_auto_refresh"
+                android:layout_marginTop="16dp" />
+            <TextView
+                android:id="@+id/tv_data_management_subtext"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/data_management_subtext"
+                style="@style/BodyText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_data_management_label"
+                android:layout_marginTop="4dp" />
+            <Button
+                android:id="@+id/btn_reset_data"
+                style="@style/AppButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:text="@string/reset_data"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_data_management_subtext"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:padding="12dp" />
+            <Button
+                android:id="@+id/btn_test_notification"
+                style="@style/AppButton"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:text="@string/test_notification"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_reset_data"
+                android:layout_marginTop="8dp"
+                android:padding="12dp" />
+
+            <!-- Footer -->
+            <TextView
+                android:id="@+id/tv_footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© 2025 Mohammad Kavish | RailOptima v1.0"
+                style="@style/FooterText"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btn_test_notification"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

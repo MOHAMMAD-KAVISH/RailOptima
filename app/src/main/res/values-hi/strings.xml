@@ -1,0 +1,124 @@
+<resources>
+    <string name="app_name">रेलऑप्टिमा</string>
+    <string name="tagline">रेलऑप्टिमा: सही रास्ते पर!</string>
+    <string name="username">उपयोगकर्ता नाम</string>
+    <string name="password">पासवर्ड</string>
+    <string name="login">लॉगिन</string>
+    <string name="home">होम</string>
+    <string name="forecast">पूर्वानुमान</string>
+    <string name="schedule">शेड्यूल</string>
+    <string name="delay">देरी</string>
+    <string name="resource">संसाधन</string>
+    <string name="settings">सेटिंग्स</string>
+    <string name="logout">लॉगआउट</string>
+    <string name="quick_actions">त्वरित कार्य</string>
+    <string name="navigation_drawer_open">नेविगेशन ड्रावर खोलें</string>
+    <string name="navigation_drawer_close">नेविगेशन ड्रावर बंद करें</string>
+    <string name="rake_id">रेक आईडी</string>
+    <string name="destination">गंतव्य</string>
+    <string name="view_details">विवरण देखें</string>
+    <string name="forecast_details">पूर्वानुमान विवरण</string>
+    <string name="close">बंद करें</string>
+    <string name="time">समय</string>
+    <string name="add_schedule">शेड्यूल जोड़ें</string>
+    <string name="confirm_schedule">शेड्यूल की पुष्टि करें</string>
+    <string name="confirm">पुष्टि करें</string>
+    <string name="cancel">रद्द करें</string>
+
+
+    <string name="language">भाषा</string>
+    <string name="notifications">सूचनाएं</string>
+    <string name="enable_notifications">सूचनाएं सक्षम करें</string>
+    <string name="data_management">डेटा प्रबंधन</string>
+    <string name="reset_data">डेटा रीसेट करें</string>
+    <string name="reset_data_confirm">क्या आप वाकई सभी डेटा रीसेट करना चाहते हैं? यह आपको लॉगआउट कर देगा।</string>
+    <string name="reset">रीसेट</string>
+    <string name="forecast_result">पूर्वानुमान परिणाम</string>
+
+    <string name="loading_weather">मौसम लोड हो रहा है...</string>
+    <string name="weather_disabled">सेटिंग्स में मौसम अक्षम है</string>
+    <string name="weather_error">मौसम प्राप्त करने में विफल</string>
+    <string name="location_denied">स्थान अनुमति अस्वीकृत</string>
+    <string name="weather_info">%1$s मौसम: %2$.1f°C, %3$s\nविलंब जोखिम: %4$s</string>
+    <string name="weather_error_api_key">अमान्य मौसम API कुंजी</string>
+    <string name="weather_error_api">मौसम API त्रुटि, कृपया बाद में प्रयास करें</string>
+    <string name="weather_error_network">नेटवर्क त्रुटि, कृपया कनेक्शन जांचें</string>
+    <string name="weather_icon">मौसम आइकन</string>
+    <string name="view_map">मानचित्र देखें</string>
+
+
+    <string name="email">ईमेल</string>
+    <string name="register">पंजीकरण करें</string>
+    <string name="forgot_password">पासवर्ड भूल गए?</string>
+    <string name="toggle_password">पासवर्ड दृश्यता बदलें</string>
+    <string name="name">नाम</string>
+    <string name="confirm_password">पासवर्ड की पुष्टि करें</string>
+    <string name="back_to_login">लॉगिन पर वापस जाएं</string>
+    <string name="forgot_password_instruction">पासवर्ड रीसेट लिंक प्राप्त करने के लिए अपना ईमेल दर्ज करें।</string>
+    <string name="submit">जमा करें</string>
+    <string name="map_description">ट्रेन मार्गों और स्टेशनों को दिखाने वाला मानचित्र</string>
+    <string name="footer_text">© 2025 मोहम्मद कविश&#10;RailOptima v1.0 🚂 के साथ बनाया गया</string>
+
+
+    <string name="forecast_input_title">ट्रेन देरी पूर्वानुमान</string>
+    <string name="forecast_input_subtitle">देरी की भविष्यवाणी के लिए विवरण दर्ज करें</string>
+
+    <string name="forecast_result_title">पूर्वानुमान परिणाम</string>
+    <string name="forecast_result_subtitle">अनुमानित देरी और मौसम की जानकारी</string>
+
+    <string name="forecast_details_content">विस्तृत पूर्वानुमान जानकारी यहां दिखाई जाएगी।</string>
+
+    <string name="rake_type">रेक प्रकार</string>
+    <string name="location">स्थान</string>
+
+    <string name="platform">प्लेटफ़ॉर्म</string>
+    <string name="schedule_input_title">ट्रेन अनुसूची निर्धारित करें</string>
+    <string name="schedule_input_subtitle">रेक असाइनमेंट और समय की योजना बनाएं</string>
+
+    <string name="confirm_schedule_content">कृपया अनुसूची विवरण की पुष्टि करें।</string>
+    <string name="schedule_item_placeholder">रेक #123, मुंबई, 10:00</string>
+
+    <string name="report_delay">विलंब रिपोर्ट करें</string>
+    <string name="station">स्टेशन</string>
+    <string name="delay_minutes">विलंब (मिनटों में)</string>
+    <string name="resolve_delay">विलंब हल करें</string>
+    <string name="resolve_delay_content">क्या आप वाकई इस विलंब को हल करना चाहते हैं?</string>
+    <string name="resolve">हल करें</string>
+    <string name="delay_input_title">ट्रेन विलंब रिपोर्ट करें</string>
+    <string name="delay_input_subtitle">स्टेशनों पर रेक के लिए विलंब दर्ज करें</string>
+    <string name="delay_item_placeholder">रेक #123, मुंबई पर 30 मिनट विलंब</string>
+
+    <string name="resource_id">संसाधन आईडी</string>
+    <string name="resource_type">संसाधन प्रकार</string>
+    <string name="status">स्थिति</string>
+    <string name="assign_resource">संसाधन सौंपें</string>
+    <string name="update_resource">संसाधन अपडेट करें</string>
+    <string name="update_resource_content">कृपया अपडेट की गई संसाधन स्थिति की पुष्टि करें।</string>
+    <string name="update">अपडेट करें</string>
+    <string name="resource_input_title">संसाधनों का प्रबंधन</string>
+    <string name="resource_input_subtitle">क्रू, लोकोमोटिव और अन्य को सौंपें व अपडेट करें</string>
+    <string name="resource_type_placeholder">क्रू</string>
+    <string name="resource_id_placeholder">क्रू A</string>
+    <string name="status_placeholder">उपलब्ध</string>
+
+    <string name="settings_title">सेटिंग्स</string>
+    <string name="settings_subtitle">अपना RailOptima अनुभव कस्टमाइज़ करें</string>
+    <string name="theme">थीम</string>
+    <string name="theme_subtext">डार्क और लाइट मोड के बीच स्विच करें</string>
+    <string name="enable_dark_mode">डार्क मोड सक्षम करें</string>
+    <string name="font_size">फ़ॉन्ट साइज़</string>
+    <string name="font_size_subtext">बेहतर पढ़ने के लिए टेक्स्ट साइज़ समायोजित करें</string>
+    <string name="auto_refresh_weather">मौसम स्वतः-रीफ़्रेश</string>
+    <string name="auto_refresh_subtext">मौसम डेटा को अपने आप अपडेट करें</string>
+    <string name="enable_auto_refresh">स्वतः-रीफ़्रेश सक्षम करें</string>
+    <string name="language_subtext">अपनी पसंदीदा भाषा चुनें</string>
+    <string name="notifications_subtext">सूचना वरीयताएं प्रबंधित करें</string>
+    <string name="data_management_subtext">ऐप डेटा साफ़ करें या सूचनाएं टेस्ट करें</string>
+
+
+    <string name="test_notification">परीक्षण सूचना</string>
+
+
+
+
+</resources>
