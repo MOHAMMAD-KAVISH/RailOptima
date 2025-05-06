@@ -12,7 +12,7 @@ object WeatherUtils {
         .connectTimeout(10, TimeUnit.SECONDS)
         .readTimeout(10, TimeUnit.SECONDS)
         .build()
-    private val apiKey = "a9c0a0616d2a23ad52f01037b9c48511" // Your valid key
+    private val apiKey = "a9c0a0616d2a23ad52f01037b9c48" // Your valid key
     private val cache = mutableMapOf<String, Pair<Long, WeatherData>>()
     private const val CACHE_DURATION_MS = 30 * 60 * 1000 // 30 minutes
 
